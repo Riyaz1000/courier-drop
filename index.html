@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>courier-form</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="bg-indigo-800 min-h-screen p-10">
+      <div class="bg-white p-5 max-w-xl mx-auto rounded">
+        <h4 class="font-semibold">Football Accesscories</h4>
+
+        <form class="space-y-4 my-5" method="post" id="courier-request">
+          <div class="grid grid-cols-2 gap-5">
+            <!--name-->
+            <input
+              type="text"
+              class="px-4 py-1 rounded bg-gray-200 outline-none block w-full"
+              placeholder="name"
+              name="name"
+              id="nameId"
+              required
+            />
+
+            <!--number-->
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Phone"
+              name="mobile"
+              id="numberId"
+              required
+            />
+          </div>
+
+          <!--datetime-->
+          <input
+            type="datetime-local"
+            class="form-input"
+            placeholder="Pickup date"
+            name="pickupDate"
+            required
+            id="pickup-date"
+          />
+
+          <div>
+            <textarea
+              name="pickup-area"
+              id="pickup-area"
+              cols="30"
+              rows="4"
+              placeholder="Enter your pickup address"
+              class="form-input"
+            ></textarea>
+          </div>
+
+          <button
+            class="bg-indigo-500 text-white px-3 py-1 rounded w-full hover:bg-indigo-600"
+          >
+            Create Pickup
+          </button>
+        </form>
+      </div>
+
+      <div class="bg-white p-5 max-w-xl mx-auto rounded mt-10 hidden">
+        <h4 class="font-semibold">Item Request</h4>
+
+        <div class="space-y-4 my-5">
+          <table class="table table-fixed border w-full">
+            <tr>
+              <th class="px-2 py-1 border">Customer</th>
+              <th class="px-2 py-1 border">Pickup date</th>
+              <th class="px-2 py-1 border">Address</th>
+              <th class="px-2 py-1 border w-20"></th>
+            </tr>
+
+            <tr>
+              <td class="px-2 py-1 border">Riyaz</td>
+              <td class="px-2 py-1 border">22</td>
+              <td class="px-2 py-1 border">Karaikudi</td>
+              <td class="px-2 py-1 border">
+                <button
+                  type="button"
+                  class="px-2 py-1 rounded bg-red-500 hover:bg-red-800 text-white text-sm"
+                >
+                  delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
